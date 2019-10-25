@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 //客户信息
 Route::prefix('/client')->group(function () {
     Route::get('/create', 'Index\ClientController@create');
@@ -33,3 +34,8 @@ Route::prefix('/service')->group(function () {
     Route::post('create_do', 'Index\ServiceController@create_do');//添加执行
     Route::get('list', 'Index\ServiceController@list');//列表展示
 });
+=======
+Route::get('/create', 'index\HereController@create');
+Route::post('/createDo', 'index\HereController@createDo');
+Route::get('index/list', 'index\HereController@list');
+>>>>>>> cb142b7f91793c696867800d4458fcacde9a2b25
