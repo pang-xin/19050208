@@ -25,3 +25,11 @@ Route::prefix('/client')->group(function () {
     Route::post('/update/{id}', 'Index\ClientController@update');
     Route::get('/destroy/{id}', 'Index\ClientController@destroy');
 });
+
+
+//服务信息
+Route::prefix('/service')->group(function () {
+    Route::get('create', 'Index\ServiceController@create');//添加页面
+    Route::post('create_do', 'Index\ServiceController@create_do');//添加执行
+    Route::get('list', 'Index\ServiceController@list');//列表展示
+});
