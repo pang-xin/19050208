@@ -13,27 +13,27 @@
         <table>
             <tr>
                 <td>客户名称:</td>
-                <td><input type="text" name="ke_name"></td>
+                <td><input type="text" name="ke_name"><span style=color:red;>{{$errors->first('ke_name')}}</span></td>
             </tr>
             <tr>
                 <td>客户编码:</td>
-                <td><input type="text" name="ke_code"></td>
+                <td><input type="text" name="ke_code"><span style=color:red;>{{$errors->first('ke_code')}}</span></td>
             </tr>
             <tr>
                 <td>客户简称:</td>
-                <td><input type="text" name="ke_jian"></td>
+                <td><input type="text" name="ke_jian"><span style=color:red;>{{$errors->first('ke_jian')}}</span></td>
             </tr>
             <tr>
                 <td>电话:</td>
-                <td><input type="text" name="tel"></td>
+                <td><input type="text" name="tel"><span style=color:red;>{{$errors->first('tel')}}</span></td>
             </tr>
             <tr>
                 <td>网址:</td>
-                <td><input type="text" name="ke_url"></td>
+                <td><input type="text" name="ke_url"><span style=color:red;>{{$errors->first('ke_url')}}</span></td>
             </tr>
             <tr>
                 <td>电子邮件:</td>
-                <td><input type="text" name="email"></td>
+                <td><input type="text" name="email"><span style=color:red;>{{$errors->first('email')}}</span></td>
             </tr>
             <tr>
                 <td>地区:</td>
