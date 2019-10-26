@@ -22,8 +22,8 @@
             <td>行业属性</td>
             <td>企业性质</td>
         </tr>
-        <tr>
-            @foreach($data as $k=>$v)
+        @foreach($data as $k=>$v)
+            <tr>
                 <td>{{$v->ke_id}}</td>
                 <td>{{$v->ke_name}}</td>
                 <td>{{$v->ke_code}}</td>
@@ -32,7 +32,7 @@
                 <td>
                     @if($v->ke_type==1)
                         机票客户
-                    @elseif($v->ke_tyoe==2)
+                    @elseif($v->ke_type==2)
                         火车票客户
                     @else
                         大巴客户
@@ -50,8 +50,8 @@
                 <td>{{$v->xiaoshou}}</td>
                 <td>{{$v->hang_shuxing}}</td>
                 <td>{{$v->qi_xingzhi}}</td>
-            @endforeach
-        </tr>
+            </tr>
+        @endforeach
     </table>
 </body>
 </html>

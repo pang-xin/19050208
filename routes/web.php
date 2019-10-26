@@ -35,7 +35,15 @@ Route::prefix('/service')->group(function () {
     Route::get('list', 'Index\ServiceController@list');//列表展示
 });
 
+
 Route::get('/create', 'index\HereController@create');
 Route::post('/createDo', 'index\HereController@createDo');
 Route::get('index/list', 'index\HereController@list');
+
+Route::prefix('/synthesize')->group(function () {
+    Route::get('index','Index\IndexController@index');
+    Route::get('client', 'Index\IndexController@client');//添加页面
+    Route::get('service', 'Index\IndexController@service');//添加执行
+    Route::get('here', 'Index\IndexController@here');//列表展示
+});
 
