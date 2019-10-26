@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="">
+        搜索服务类型:<input type="text" name="fu_type" value="{{$query['fu_type']??''}}" placeholder="请输入服务类型">
+        搜索客户名称:<input type="text" name="ke_name" value="{{$query['ke_name']??''}}" placeholder="请输入客户名称">
+        <input type="submit" value="搜索">
+    </form>
+
     <form action="" method="">
         <table border="1">
             <tr>
@@ -38,11 +44,14 @@
                     <td>{{$v->fankui}}</td>
                     <td>{{$v->desc}}</td>
                     <td>{{$v->beizhu}}</td>
-                    <td></td>
+                    <td>
+                        <a href="{{url('/service/delete/'.$v->fu_id)}}">删除</a>
+                        <a href="{{url('/service/update/'.$v->fu_id)}}">修改</a>
+                    </td>
                 </tr>
             @endforeach
         </table>
-        {{$data}}
+        {{$data->appends($query)->links()}}
     </form>
 </body>
 </html>
